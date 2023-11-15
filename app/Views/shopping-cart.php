@@ -69,11 +69,7 @@ if($database->rowCount() > 0){
                     <p class="text-xs text-gray-500 font-medium mb-2"><?= $cart_item->category_name ?></p>
                     <p class="text-xs text-primary font-bold">&#8369; <span class="item-price"><?= $cart_item->product_price ?></span></p>
                   </div>
-                  <div class="h-max flex flex-col-reverse sm:flex-row items-center border border-gray-300/40 rounded-md ml-auto">
-                    <button id="<?= $cart_item->c_no ?>" data-id="<?= $cart_item->c_id ?>" class="decrement minus-btn py-1 sm:py-2 px-2 md:px-3 text-sm font-bold"><i class="ri-subtract-line pointer-events-none"></i></button>
-                    <p id="items-counters-<?= $cart_item->c_no ?>" class="item-counter text-sm font-semibold py-1 sm:py-2 px-2 md:px-3 border-y sm:border-x border-y-gray-300/40 sm:border-x-gray-300/40"><?= $cart_item->quantity ?></p>
-                    <button id="<?= $cart_item->c_no ?>" data-id="<?= $cart_item->c_id ?>" class="increment add-btn py-1 sm:py-2 px-2 md:px-3 text-sm font-bold"><i class="ri-add-fill  pointer-events-none"></i></button>
-                  </div>
+                  <input type="number" class="w-12 h-10 text-sm text-center font-medium border-2 border-gray-200 rounded-sm outline-none ml-auto" value="<?= $cart_item->quantity ?>">
                 </div>
               </div>
               <?php endforeach ?>
